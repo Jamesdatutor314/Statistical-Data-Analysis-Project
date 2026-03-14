@@ -54,7 +54,7 @@ This project focuses on analyzing customer behavior for the telecom operator **M
 ![Average Duration Bar Chart](pics/bar_duration.png)
 
 ### Monthly Text Messages Per Plan
-![Text Message Histogram](cite: 1181)
+![Text Message Histogram](pics/hist_messages.png)
 
 ### Monthly Revenue Per Plan
 ![Revenue Histogram](pics/hist_revenue.png)
