@@ -6,7 +6,7 @@ This project focuses on analyzing customer behavior for the telecom operator **M
 
 ## Files
 1. **SDA.ipynb** The main Jupyter Notebook containing the code for data cleaning, monthly usage aggregation, behavioral analysis, and statistical hypothesis testing.
-2. [cite_start]**megaline_calls.csv, megaline_internet.csv, megaline_messages.csv, megaline_users.csv, megaline_plans.csv** Datasets containing information on clients, calls, text messages, web traffic, and plan conditions.
+2. **megaline_calls.csv, megaline_internet.csv, megaline_messages.csv, megaline_users.csv, megaline_plans.csv** Datasets containing information on clients, calls, text messages, web traffic, and plan conditions.
 3. **README.md** Overview of the project, methodology, tools used, and key findings.
 
 ## Approach
