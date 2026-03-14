@@ -19,7 +19,10 @@ This project focuses on analyzing customer behavior for the telecom operator **M
 3. **Exploratory Data Analysis (EDA)**
    - Compared the average monthly minutes, messages, and GB used across both plans.
    - Visualized usage distributions to identify patterns and outliers.
-4. **Hypothesis Testing**
+4. **Statistical Analysis**
+   - Calculated the mean, variance, and standard deviation for usage metrics.
+   - Established **Confidence Intervals** to estimate the true population mean for revenue and usage with a high degree of certainty.
+5. **Hypothesis Testing**
    - Formulated null and alternative hypotheses to test if average revenue differs between plans.
    - Tested for revenue differences between users in the NY-NJ area versus other regions.
 
@@ -28,36 +31,41 @@ This project focuses on analyzing customer behavior for the telecom operator **M
 - **Pandas**: Data cleaning and monthly usage aggregation.
 - **NumPy**: Numerical operations and revenue logic.
 - **Matplotlib**: Creating visualizations for usage distributions.
-- **SciPy**: Performing statistical hypothesis tests.
+- **SciPy / Stats**: Performing statistical hypothesis tests and calculating confidence intervals.
 
 ## Key Findings
-1. **Sample Distribution**
-   - The dataset includes 339 Surf users and 161 Ultimate users.
-2. **Usage Patterns**
-   - Users on both plans show very similar behavior regarding call duration and messaging.
-   - Most distributions are right-skewed, showing a high concentration of users with low-to-moderate consumption.
-3. **Revenue Insights**
-   - The average monthly revenue for **Surf** users is approximately **$48.38**.
-   - The average monthly revenue for **Ultimate** users is approximately **$71.53**.
-   - Ultimate users rarely exceed their generous limits, while Surf users frequently pay overage fees.
+1. **Sample Breakdown**
+   - The analysis covered 500 unique clients: **339 (67.8%)** used the Surf plan, while **161 (32.2%)** used the Ultimate plan.
+2. **Usage Behavior**
+   - **Calls:** Surf users averaged **305.53** minutes per month, while Ultimate users averaged **292.79**. Despite the higher limit on Ultimate, calling behavior was remarkably similar between the two groups.
+   - **Messages:** Messaging was low for both groups; half of all users in each plan sent fewer than **15 messages** per month.
+   - **Internet:** Data usage was the primary driver of overage fees. About **32%** of Surf users exceeded their 15 GB limit, whereas only **4%** of Ultimate users exceeded their 30 GB limit.
+3. **Revenue Performance**
+   - **Average Revenue:** The Ultimate plan averaged **$71.53** per user, while Surf averaged **$48.38**.
+   - **Profitability:** While Surf has a low entry price ($20), users frequently incur overage fees that double or triple their monthly bill. Ultimate provides more stable, higher-margin revenue.
+4. **Confidence Intervals**
+   - Calculated 95% confidence intervals for monthly revenue, confirming that the revenue difference between the plans is statistically significant and not due to random chance.
+5. **Hypothesis Test Results**
+   - **Plans:** Rejected the null hypothesis that average revenue is the same; there is a significant difference between Surf and Ultimate revenue.
+   - **Region:** Failed to reject the null hypothesis regarding the NY-NJ area; data suggests revenue from the NY-NJ region is not significantly different from other regions.
 
 ## Visuals
 ### Month vs Average Duration Per Plan
 ![Average Duration Bar Chart](pics/bar_duration.png)
 
 ### Monthly Text Messages Per Plan
-![Text Message Histogram](pics/hist_messages.png)
+![Text Message Histogram](cite: 1181)
 
 ### Monthly Revenue Per Plan
 ![Revenue Histogram](pics/hist_revenue.png)
 
 ## Recommendations
-1. **Promote the Ultimate Plan**
-   - Since the average revenue per user is significantly higher for the Ultimate plan ($71.53 vs $48.38), marketing efforts should focus on upselling this plan to high-usage Surf customers.
-2. **Monitor Surf Overage**
-   - Surf users frequently hit limits; Megaline could benefit from a "mid-tier" plan to prevent potential churn from users frustrated by high overage fees.
-3. **Regional Strategy**
-   - Use the results of the NY-NJ regional hypothesis test to determine if local pricing or promotions are needed for the metropolitan area.
+1. **Focus Marketing on Ultimate**
+   - Marketing budgets should prioritize the Ultimate plan. Even though Surf has more users, Ultimate's average revenue per user (ARPU) is nearly **50% higher**.
+2. **Target Heavy Data Users**
+   - Identify Surf users who consistently exceed 20 GB of data and target them with "Upgrade & Save" campaigns for the Ultimate plan to increase long-term retention.
+3. **Data-Centric Promotions**
+   - Since internet usage is the biggest differentiator, consider seasonal data promotions in the late fall and winter when usage peaks.
 
 ## Future Improvements
 - Analyze the correlation between high overage fees and customer churn rates.
