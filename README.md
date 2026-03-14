@@ -2,7 +2,7 @@
 By James Weaver
 
 ## Introduction
-This project focuses on analyzing customer behavior for the telecom operator **Megaline**[cite: 2, 1324]. [cite_start]The objective is to determine which of two prepaid plans—**Surf** or **Ultimate**—generates more revenue to help the commercial department optimize the advertising budget[cite: 4, 1326]. [cite_start]The analysis is based on a sample of 500 clients from the year 2018.
+This project focuses on analyzing customer behavior for the telecom operator **Megaline**. The objective is to determine which of two prepaid plans—**Surf** or **Ultimate**—generates more revenue to help the commercial department optimize the advertising budget. The analysis is based on a sample of 500 clients from the year 2018.
 
 ## Files
 1. **SDA.ipynb** The main Jupyter Notebook containing the code for data cleaning, monthly usage aggregation, behavioral analysis, and statistical hypothesis testing.
